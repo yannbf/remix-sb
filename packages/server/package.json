@@ -1,0 +1,44 @@
+{
+  "name": "app",
+  "private": true,
+  "description": "",
+  "license": "",
+  "sideEffects": false,
+  "scripts": {
+    "build": "cross-env NODE_ENV=production remix build",
+    "dev": "cross-env NODE_ENV=development remix dev",
+    "postinstall": "remix setup node",
+    "start": "cross-env NODE_ENV=production remix-serve build",
+    "storybook": "start-storybook -p 6007",
+    "storybook:all": "concurrently \"yarn dev\" \"start-storybook -p 6007\"",
+    "build-storybook": "build-storybook"
+  },
+  "dependencies": {
+    "@remix-run/react": "^1.2.2",
+    "@remix-run/serve": "^1.2.2",
+    "cross-env": "^7.0.3",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "remix": "^1.2.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.17.5",
+    "@remix-run/dev": "^1.2.2",
+    "@storybook/addon-actions": "^6.5.0-alpha.42",
+    "@storybook/addon-essentials": "^6.5.0-alpha.42",
+    "@storybook/addon-interactions": "^6.4.22",
+    "@storybook/addon-links": "^6.5.0-alpha.42",
+    "@storybook/server": "^6.5.0-alpha.42",
+    "@storybook/test-runner": "^0.0.8",
+    "@types/react": "^17.0.24",
+    "@types/react-dom": "^17.0.9",
+    "babel-loader": "^8.2.3",
+    "component-library": "1.0.0",
+    "concurrently": "^7.2.0",
+    "jest": "^28.1.0",
+    "typescript": "^4.5.5"
+  },
+  "engines": {
+    "node": ">=14"
+  }
+}

@@ -1,0 +1,27 @@
+ {
+  "title": "Routes/Home/Posts/Post",
+  "parameters": {
+    "server": { "id": "posts/some-post-id" }
+  },
+  "args": { 
+    "label": "Hello world",
+    "userType": "normal"
+  },
+  "argTypes": {
+    "label": { "control": "text" },
+    "userType": {
+      "control": { "type": "select", "options": ["normal", "VIP"] }
+    }
+  },
+  "stories": [
+    {
+      "name": "Default"
+    },
+    {
+      "name": "VIP user",
+      "args": { 
+        "userType": "VIP"
+      }
+    }
+  ]
+}

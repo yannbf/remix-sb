@@ -1,0 +1,11 @@
+{
+  "title": "Routes/Home",
+  "parameters": {
+    "server": { "id": "." }
+  },
+  "stories": [
+    {
+      "name": "Default"
+    }
+  ]
+}

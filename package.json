@@ -1,0 +1,21 @@
+{
+  "name": "root",
+  "private": true,
+  "workspaces": [
+    "packages/server",
+    "packages/shared"
+  ],
+  "version": "1.0.0",
+  "scripts": {
+    "component-lib": "yarn workspace component-library storybook",
+    "app": "yarn workspace app dev",
+    "app:storybook": "yarn workspace app storybook",
+    "storybook": "concurrently -k -n \"Component Lib,App\" -c \"magenta,blue\" \"yarn component-lib\" \"yarn app:storybook\""
+  },
+  "author": "Yann Braga <yannbf@gmail.com>",
+  "license": "MIT",
+  "packageManager": "yarn@3.2.0",
+  "devDependencies": {
+    "concurrently": "^7.0.0"
+  }
+}
